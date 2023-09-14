@@ -1,0 +1,40 @@
+import java.util.Scanner; // irá importar a Biblioteca de exibir a saída de dados,só utiliza o import Scanner quando o algoritmo for pedir alguma entrada de dados do usuário
+public class AtividadeTarde{ // estrutura básica
+    public static void main(){ // estrutura básica
+        Scanner scanner = new Scanner (System.in); 
+        // cria um novo objeto para se trabalhar com a classe Scanner, entrada de dados
+        
+        System.out.println("Aqui exibe informações");
+        // println serve para exibir uma informação e quebrar a linha ao final da exibição
+        
+        System.out.print("Aqui exibe outra informação");
+        // print serve para exibir uma informação mas não quebra linha ao final da execução
+        
+        String nomeCompleto; // armazena texto/número/tudo
+        int idade; // armazena números INTEIROS
+        Float peso; // armazena números com vírgula
+        Float altura;
+        Float imc;
+        
+        System.out.println("Por favor, informe seu nome:");
+        nomeCompleto = scanner.nextLine();
+        //nextLine() ele recebe todo tipo de dados, ele recebe tudo que o usuário digita
+        
+        System.out.println("Por favor,informe sua idade:");
+        idade = scanner.nextInt();
+        // nextInt aceita que o usuário digite apenas números inteiros
+        
+        System.out.println("Por favor, informe seu peso:");
+        peso = scanner.nextFloat();
+        // nextFloat aceita que o usuário aceite números com vírgula, ou seja, números quebrado
+        
+        System.out.println("Por favor, informe sua altura");
+        altura = scanner.nextFloat();
+        
+        imc = peso/(altura*altura);
+        // aqui é feito o cálculo do IMC e guardado o resultado na variável que se chama imc
+        
+        System.out.println("Olá "+nomeCompleto+", seu IMC é "+imc);
+        
+         }
+}
